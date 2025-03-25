@@ -6,16 +6,14 @@ select {
     width: 100%;
     border-radius: .5rem;
     border: .2rem solid transparent;
-    outline: .1rem solid var(--put-stroke);
-    gap: 1.6rem;
-    padding: .75rem 1rem;
-    font: var(--body)
+    outline: .1rem solid var(--input-stroke);
+    padding: .48rem 1rem;
+    color: var(--input-placeholder);
 }
 
 label {
-    font: var(--text-sm);
-    color: var(--text-secondary);
-
+    font-size: 1.2rem;
+    font: var(--body);
     display: block;
     margin-bottom: .25rem;
 }

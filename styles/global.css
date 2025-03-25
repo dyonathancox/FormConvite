@@ -5,6 +5,8 @@
 }
 
 :root{
+
+    font-size: 62.5%;
     /*Colors Brand*/
     --brand-light: #59B2FF;
     --brand-mid: #3487CF;
@@ -26,7 +28,7 @@
 
     /*Colos Inputs*/
     --input-base: #1C1F21;
-    --put-stroke: #363B40;
+    --input-stroke: #363B40;
     --input-placeholder: #869198;
 
     /*Colos Shape*/
@@ -45,15 +47,15 @@
     --heading-sm: 800 1.8rem "Baloo 2", sans-serif;
     --body-md: 400 1.6rem "Open Sans", sans-serif;
     --body-sm: 500 1.4rem "Open Sans", sans-serif;
-    --body-: 500 1.2rem "Open Sans", sans-serif;
+    --body-: 400 0.875rem "Open Sans", sans-serif;
 
     
 }
 
 body{
     background-color: var(--shape-background);
-    color: var(--text-heading);
-    font: var(--body-md);
+    color: var(--text-body);
+    font: var(--body);
 }
 
 img{
@@ -63,6 +65,7 @@ img{
 
 .flex{
     display: flex;
+    gap: 1.6rem;
 }
 
 .flex-1{
