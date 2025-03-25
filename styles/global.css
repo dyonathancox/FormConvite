@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
 
     font-size: 62.5%;
     /*Colors Brand*/
@@ -46,31 +46,32 @@
     --heading-md: 600 2.8rem "Baloo 2", sans-serif;
     --heading-sm: 800 1.8rem "Baloo 2", sans-serif;
     --body-md: 400 1.6rem "Open Sans", sans-serif;
-    --body-sm: 500 1.4rem "Open Sans", sans-serif;
+    --body-sm: 400 1.4rem "Open Sans", sans-serif;
     --body-: 400 0.875rem "Open Sans", sans-serif;
 
-    
+
 }
 
-body{
+body {
     background-color: var(--shape-background);
     color: var(--text-body);
-    font: var(--body);
+    font: var(--body-sm);
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
 
-.flex{
+.flex {
     display: flex;
     gap: 1.6rem;
 }
 
-.flex-1{
+.flex-1 {
     flex: 1;
 }
-.flex-2{
+
+.flex-2 {
     flex: 2;
 }

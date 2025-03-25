@@ -1,6 +1,7 @@
 @import url(fields/index.css);
 
 form {
+    max-width: 56rem;
     margin-top: 3rem;
 }
 
@@ -20,12 +21,13 @@ fieldset+fieldset {
     gap: 1rem;
 }
 
-.child-info span{
+.child-info span {
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    margin-bottom: 2.4rem;
 
-    > legend{
+    >legend {
         font: var(--heading-sm);
         color: var(--text-heading);
         letter-spacing: .1rem;
@@ -34,5 +36,5 @@ fieldset+fieldset {
     & svg path {
         width: 2.4rem;
         height: 2.4rem;
-      }
+    }
 }

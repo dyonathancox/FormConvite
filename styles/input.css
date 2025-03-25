@@ -7,7 +7,16 @@ select {
     border-radius: .5rem;
     border: .2rem solid transparent;
     outline: .1rem solid var(--input-stroke);
-    padding: .48rem 1rem;
+    padding: 1.3rem;
+    font: var(--body-sm);
+
+
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+input[type="date"] {
     color: var(--input-placeholder);
 }
 
@@ -15,7 +24,7 @@ label {
     font-size: 1.2rem;
     font: var(--body);
     display: block;
-    margin-bottom: .25rem;
+    margin-bottom: 1.2rem;
 }
 
 input:focus,

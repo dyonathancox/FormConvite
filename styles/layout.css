@@ -1,7 +1,7 @@
 #app {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 48.75% 51.25%   ;
+    grid-template-columns: 48.75% 51.25%;
     padding: 2rem;
     height: 100vh;
     overflow: hidden;
@@ -12,9 +12,9 @@ aside {
     display: grid;
     justify-items: end;
 
-    & > img{
+    &>img {
         border-radius: 1.2rem;
-        width: 40rem;
+        width: 35rem;
     }
 
     & .aside-container {
@@ -23,41 +23,39 @@ aside {
         font: var(--body-sm);
         color: var(--text-body);
 
-        > header{
+        >header {
             position: absolute;
             top: 3.2rem;
-            right: 10rem;
+            right: 5rem;
 
-            >img{
+            >img {
                 width: 4.5rem;
                 height: 4.8rem;
                 margin-bottom: 1.6rem;
             }
-            > h1{
+
+            >h1 {
                 font: var(--font-logo);
                 color: var(--pink);
                 margin-bottom: .4rem;
             }
-        } 
+        }
     }
 }
 
 main {
-    max-width: 82rem;
     overflow: auto;
     background-color: var(--shape-body);
-    padding: 2rem;
+    padding: 8rem 13rem;
     border-radius: 1.2rem;
     margin-left: 2rem;
 
     & .main-container {
-        max-width: 33rem;
         margin: 0 auto;
 
-        > .back{
+        >.back {
             font: var(--heading-md);
             color: var(--text-heading);
         }
     }
 }
-
