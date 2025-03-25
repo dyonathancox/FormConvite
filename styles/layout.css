@@ -1,7 +1,7 @@
 #app {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 51.25% 48.75%  ;
+    grid-template-columns: 48.75% 51.25%   ;
     padding: 2rem;
     height: 100vh;
     overflow: hidden;
@@ -18,6 +18,7 @@ aside {
     }
 
     & .aside-container {
+        max-width: 31rem;
         margin-right: auto;
         font: var(--body-sm);
         color: var(--text-body);
@@ -42,6 +43,7 @@ aside {
 }
 
 main {
+    max-width: 82rem;
     overflow: auto;
     background-color: var(--shape-body);
     padding: 2rem;
