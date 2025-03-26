@@ -4,60 +4,40 @@ select {
     background-color: var(--input-base);
     appearance: none;
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 1rem;
     border: .2rem solid transparent;
-    outline: .1rem solid var(--input-stroke);
+    outline: .2rem solid var(--input-stroke);
+    color: var(--text-body);
     padding: 1.3rem;
     font: var(--body-sm);
-
-
 }
 
 input::placeholder,
 textarea::placeholder,
 select::placeholder,
-input[type="date"] {
+input[type="datetime-local"] {
     color: var(--input-placeholder);
 }
 
 label {
-    font-size: 1.2rem;
     font: var(--body);
     display: block;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
 }
 
 input:focus,
 select:focus,
 textarea:focus,
-input[type="date"]:focus-within {
-    outline: .25rem solid var(--surface-secondary);
-    border-color: solid var(--stroke-highlight);
+input[type="datetime-local"]:focus-within {
+    outline: .2rem solid var(--input-placeholder);
+    border-color: solid var(--input-placeholder);
     outline-offset: .1px;
 }
 
-input[type="date"] {
-    position: relative;
-
+input[type="datetime-local"] {
     &::-webkit-calendar-picker-indicator {
         opacity: 0;
     }
-
-    &::before {
-        content: "";
-        position: absolute;
-        background: url(../../assets/icons/calendar-03.svg) center/contain;
-        right: 1rem;
-        width: 1.25rem;
-        height: 1.25rem;
-
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-select {
-    background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
 }
 
 .address .flex {
@@ -104,3 +84,4 @@ input {
         display: none;
     }
 }
+

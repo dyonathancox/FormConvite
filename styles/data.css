@@ -1,0 +1,150 @@
+#data {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--input-stroke);
+
+    & legend img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    label {
+        font: 400 var(--body-sm);
+        color: var(--text-body);
+    }
+
+    .requid {
+
+        & .danger {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: .5rem;
+            margin-top: .5rem;
+
+            & span {
+                color: var(--danger);
+                font: var(--body-xs);
+                margin: 0;
+            }
+
+            svg {
+                height: 1.6rem;
+                width: 1.6rem;
+            }
+        }
+
+        & input {
+            &:invalid {
+                border: 1px solid var(--danger);
+            }
+
+            &:focus-within {
+                border: none;
+            }
+
+            &:valid+.danger,
+            &:focus-within+.danger {
+                display: none;
+            }
+        }
+
+    }
+
+    & .colum {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+#checks {
+    padding-top: 2.5rem;
+    display: grid;
+    gap: .5rem;
+
+    & label {
+        font: 400 var(--body-sm);
+        color: var(--text-body);
+        margin: 0;
+    }
+
+    & a {
+        color: var(--brand-light);
+
+        &:hover {
+            color: var(--brand-mid);
+        }
+    }
+
+    & .align {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    & .box {
+
+        background-color: var(--input-base);
+        position: relative;
+        height: 2rem;
+        width: 2rem;
+        border: 1px solid var(--input-stroke);
+        border-radius: .6rem;
+
+
+        & input {
+            all: unset;
+            appearance: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        &:has(:checked) {
+            background-image: url(../assets/icons/check.svg);
+            background-size: cover;
+            border: 1px solid var(--brand-light);
+            border-radius: .6rem;
+        }
+    }
+}
+
+
+input:not([type="radio"]):focus-within, textarea:focus-within {
+    outline: 1px solid var(--brand-light);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--input-placeholder);
+    font: 400 var(--body-md);
+}
+
+.input-wrapper {
+    & input:not(:focus):invalid {
+        outline: 1px solid var(--danger);
+    }
+
+    & input:not(:focus):invalid ~ .error {
+        display: flex;
+    }
+}
+
+.error {
+    display: none;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+
+    & span {
+        color: var(--danger);
+        font: var(--body-xs);
+       }
+
+       svg {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+}

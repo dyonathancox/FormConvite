@@ -1,0 +1,29 @@
+#upload {
+    margin-inline: auto 0;
+    margin-block: 3rem 5rem;
+    background-color: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 17rem;
+    padding: 1.3rem 2rem;
+
+    & img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    & button {
+        all: unset;
+        font: 500 var(--body-md);
+        color: var(--text-head);
+        
+    }
+
+    &:hover {
+        background-color: var(--brand-mid);
+    }
+
+}

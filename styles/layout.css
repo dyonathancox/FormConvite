@@ -1,7 +1,7 @@
 #app {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 48.75% 51.25%;
+    grid-template-columns: 40% 60%;
     padding: 2rem;
     height: 100vh;
     overflow: hidden;
@@ -44,14 +44,17 @@ aside {
 }
 
 main {
+    max-width: 80rem;
     overflow: auto;
     background-color: var(--shape-body);
-    padding: 8rem 13rem;
+    padding: 4rem 8rem;
     border-radius: 1.2rem;
     margin-left: 2rem;
-
+    
     & .main-container {
-        margin: 0 auto;
+        max-width: 33rem;
+        margin-right: auto;
+        
 
         >.back {
             font: var(--heading-md);

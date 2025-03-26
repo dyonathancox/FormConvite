@@ -1,0 +1,322 @@
+.card {
+    background-color: var(--shape-button);
+    border-radius: .5rem;
+    position: relative;
+    display: grid;
+    align-items: center;
+    border: 1px solid var(--input-stroke);
+
+    & img {
+        border-radius: .25rem;
+        margin: .25rem;
+        width: 95%;
+        object-fit: cover;
+    }
+
+    label {
+        font: 400 var(--body-sm);
+        color: var(--text-head);
+        display: block;
+        margin-inline: auto;
+        margin-block: .25rem .5rem;
+    }
+
+    & input {
+        all: unset;
+        appearance: none;
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    &:hover,
+    &:focus-within {
+        background-color: var(--shape-hover);
+    }
+
+    &:has(:checked) {
+        border: 2px solid var(--brand-light);
+    }
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 13.4rem);
+    gap: .8rem;
+}
+
+#light-plan {
+    display: flex;
+    gap: 6.5rem;
+}
+
+.bright {
+    min-width: 15rem;
+    padding-right: 3.5rem;
+
+
+    & label {
+        display: block;
+        color: var(--text-body);
+        margin: 2.8rem 0 1.2rem;
+    }
+
+    & .flex-2 {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        gap: .75rem;
+
+        &:has(:checked) {
+            & .escuro {
+                display: none;
+            }
+
+            & .claro {
+                display: unset;
+            }
+        }
+
+        & span {
+            font: 400 var(--body-sm);
+            color: var(--text-head);
+            margin: 0;
+        }
+
+        .claro {
+            display: none;
+        }
+
+    }
+
+    & .ipt {
+        display: grid;
+        align-items: center;
+        position: relative;
+        background-color: var(--input-base);
+        width: 6rem;
+        height: 3rem;
+        border-radius: 999px;
+        border: 1px solid var(--input-stroke);
+
+
+        & input {
+
+            all: unset;
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            background-color: var(--input-stroke);
+            border-radius: 50%;
+            margin: .25rem;
+            cursor: pointer;
+        }
+
+        &:has(:checked) {
+            background-color: var(--brand-light);
+
+            & input {
+                background-color: var(--text-heading);
+                justify-self: end;
+
+            }
+        }
+
+    }
+
+}
+
+#wallpap {
+    display: flex;
+}
+
+#fotocap {
+    color: var(--text-body);
+    font: 400 var(--body-sm);
+    margin: 0;
+    margin: 2.8rem 0 1.2rem;
+}
+
+
+.docfile {
+    margin-top: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    position: relative;
+
+    .docinpt {
+        cursor: pointer;
+        z-index: 1;
+        background-color: var(--shape-button);
+        height: 4rem;
+        width: 11.9rem;
+        display: flex;
+        place-content: center;
+        align-items: center;
+
+        margin: 0;
+
+        padding: .75rem;
+        gap: .8rem;
+        border-radius: 1rem;
+        font: 400 var(--body-sm);
+        color: var(--text-head);
+
+        >span {
+            margin: 0;
+        }
+
+        &:hover {
+            background-color: var(--shape-hover);
+
+            & svg path {
+                stroke: var(--brand-light);
+            }
+
+        }
+
+    }
+
+
+    & input {
+        all: unset;
+
+        &::file-selector-button {
+            display: none;
+        }
+
+        font: 400 var(--body-md);
+        color: var(--input-placeholder);
+    }
+
+
+
+}
+
+#data {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--input-stroke);
+
+    & legend img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    label {
+        font: 400 var(--body-sm);
+        color: var(--text-body);
+    }
+
+    .requid {
+
+        & .danger {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            margin-top: .5rem;
+
+            & span {
+                color: var(--danger);
+                font: var(--body-xs);
+                margin-bottom: 0;
+            }
+
+            img {
+                height: 1rem;
+                width: 1rem;
+            }
+
+        }
+
+
+
+
+        & input {
+            &:invalid {
+                border: 1px solid var(--danger);
+            }
+
+            &:focus-within {
+                border: none;
+            }
+
+            &:valid+.danger,
+            &:focus-within+.danger {
+                display: none;
+            }
+
+
+        }
+
+    }
+
+    & .colum {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+
+
+}
+
+#checks {
+    padding-top: 2.5rem;
+    display: grid;
+    gap: .5rem;
+
+    & label {
+        font: 400 var(--body-sm);
+        color: var(--text-body);
+    }
+
+    & a {
+        color: var(--brand-light);
+
+        &:hover {
+            color: var(--brand-mid);
+        }
+    }
+
+    & .align {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    & .box {
+
+        background-color: var(--input-base);
+        position: relative;
+        height: 1.25rem;
+        width: 1.25rem;
+        border: 1px solid var(--input-stroke);
+        border-radius: .25rem;
+
+
+        & input {
+            all: unset;
+            appearance: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        &:has(:checked) {
+            background-image: url(../assets/icons/check.svg);
+            background-size: cover;
+            border: 1px solid var(--brand-light);
+            border-radius: .25rem;
+
+        }
+
+    }
+
+}
+
